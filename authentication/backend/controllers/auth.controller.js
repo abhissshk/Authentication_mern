@@ -44,12 +44,12 @@ try{
 }catch(err){
   console.log(err)
 }
-    res.cookie("token",token,{
-      httpOnly:true,
-      secure:process.env.NODE_ENVIRONMENT=="production",
-      sameSite:"strict",
-      maxAge:7*24*60*60*1000
-    })
+    res.cookie("token", token, {
+  httpOnly: true,
+  secure: true,
+  sameSite: "None",
+  maxAge: 7 * 24 * 60 * 60 * 1000
+});
 
 return res.status(201).json({user:{firstName, lastName, email,userName,profileImage},
 message:"user created"
