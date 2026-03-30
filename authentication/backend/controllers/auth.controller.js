@@ -97,7 +97,7 @@ const login = async (req, res) => {
     });
 
   } catch (err) {
-    return res.status(500).json({ message: "internal server error" });
+return res.status(500).json({message:err})
   }
 };
 const logout=async(req,res)=>{
