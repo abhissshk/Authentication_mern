@@ -41,8 +41,9 @@ console.log(req.file);
   let token
 try{
       token=genrateToken(user._id)
-}catch(err){
-  console.log(err)
+} catch(err) {
+  console.log("JWT Error:", err);
+  return res.status(500).json({message: "token generation failed"});
 }
     res.cookie("token", token, {
   httpOnly: true,
