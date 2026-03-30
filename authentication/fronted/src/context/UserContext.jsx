@@ -10,7 +10,7 @@ function UserContext({ children }) {
   let [userData, setUserData] = useState(null)
 
   // const serverUrl = "http://localhost:4000"
-  const serverUrl = "https://authentication-backend.onrender.com"
+const serverUrl = "https://authentication-mern-bjxg.onrender.com"
 
   const getUserdata = async () => {
     try {
