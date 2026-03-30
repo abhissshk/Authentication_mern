@@ -11,8 +11,9 @@ const PORT = process.env.PORT || 4000;
 // Middleware
 app.use(express.json());
 app.use(cookieParser());
+
 app.use(cors({
-  origin: "*", // temporary (we fix later)
+  origin: "https://cosmic-meringue-b435c3.netlify.app",
   credentials: true
 }));
 
